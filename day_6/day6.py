@@ -2,7 +2,7 @@ sumans = 0
 sumeveryone = 0
 source = []
 group = []
-with open('source.txt', 'r') as sourcetxt:
+with open('./day_6/source.txt', 'r') as sourcetxt:
     for line in sourcetxt:
         source.append(line.strip())
 for item in source:
@@ -34,5 +34,5 @@ for k in answers:
             groupcount += 1
     if groupcount == len(group):
         sumeveryone += 1
-print(sumans)
-print(sumeveryone)
+print(f'Part1: {sumans}')
+print(f'Part2: {sumeveryone}')
