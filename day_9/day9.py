@@ -1,5 +1,5 @@
 xmas = []
-with open('source.txt') as source:
+with open('./day_9/source.txt') as source:
     for line in source:
         line = line.strip()
         xmas.append(int(line))
