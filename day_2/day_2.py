@@ -3,7 +3,7 @@ letter = []
 password = []
 valid = 0
 validnew = 0
-with open('source.txt', 'r') as source:
+with open('./day_2/source.txt', 'r') as source:
     for item in source:
         parts = item.strip().split()
         occurrence.append(parts[0].split('-'))
@@ -19,5 +19,5 @@ for i, item in enumerate(password):
         valid += 1
     if int(item[int(occurrence[i][0]) - 1] == letter[i]) != int(item[int(occurrence[i][1]) - 1] == letter[i]):
         validnew += 1
-print(valid)
-print(validnew)
+print(f'Part1: {valid}')
+print(f'Part2: {validnew}')
