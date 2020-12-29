@@ -4,15 +4,19 @@ with open('source.txt') as source:
         line = line.strip()
         xmas.append(int(line))
 twfive = []
+
+
 def isvalid(num, twfive):
     for item in twfive:
         for s in twfive:
-            if s!=item:
-                if num==s+item:
+            if s != item:
+                if num == s+item:
                     return True
             else:
                 continue
     return False
+
+
 for i, item in enumerate(xmas):
     if i < 25:
         twfive.append(item)
@@ -29,16 +33,15 @@ for i, item in enumerate(xmas):
 summed = []
 isvalid = False
 for i, item in enumerate(xmas):
-    if isvalid==True:
+    if isvalid == True:
         break
     summed.append(item)
     for s in xmas[i+1:]:
         summed.append(s)
-        if sum(summed)==invalidnum:
+        if sum(summed) == invalidnum:
             print(f"encryption weakness: {min(summed)+max(summed)}")
-            isvalid=True
+            isvalid = True
             break
-        elif sum(summed)>invalidnum:
+        elif sum(summed) > invalidnum:
             summed.clear()
             break
-
