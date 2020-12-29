@@ -1,6 +1,6 @@
 bags = {}
 
-with open('source.txt', 'r') as source:
+with open('./day_7/source.txt', 'r') as source:
     for line in source:
         line = line.strip().split()
         bags[f"{line[0]} {line[1]}"] = []
@@ -10,7 +10,6 @@ with open('source.txt', 'r') as source:
             if i % 4 == 0:
                 bags[f"{line[0]} {line[1]}"].append(
                     {f"{line[i + 1]} {line[i + 2]}": item})
-
 #  PART 1
 
 
