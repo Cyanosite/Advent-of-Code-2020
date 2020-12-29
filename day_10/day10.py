@@ -1,4 +1,4 @@
-adapters = sorted([int(i) for i in open('source.txt').read().split()])
+adapters = sorted([int(i) for i in open('./day_10/source.txt').read().split()])
 
 
 def part1(adapters):
