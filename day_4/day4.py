@@ -1,4 +1,4 @@
-passport = open('source.txt').read().split('\n\n')
+passport = open('./day_4/source.txt').read().split('\n\n')
 passports = []
 for item in passport:
     passports.append(item.split())
