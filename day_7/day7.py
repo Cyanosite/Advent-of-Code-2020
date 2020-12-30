@@ -1,5 +1,3 @@
-import time
-start_time = time.time()
 bags = {}
 
 with open('./day_7/source.txt', 'r') as source:
@@ -17,14 +15,14 @@ with open('./day_7/source.txt', 'r') as source:
 def contain(bag):
     shiny = False
     if bag in bags.keys():
-            for key in bags[bag].keys():
-                if key == 'shiny gold':
-                    return 1
-                elif key == 'other bags.':
-                    return 0
-                else:
-                    if contain(key) == 1:
-                        shiny = True
+        for key in bags[bag].keys():
+            if key == 'shiny gold':
+                return 1
+            elif key == 'other bags.':
+                return 0
+            else:
+                if contain(key) == 1:
+                    shiny = True
     return 1 if shiny else 0
 
 
@@ -33,4 +31,3 @@ for item in bags.keys():
     containcount += contain(item)
 
 print(containcount)
-print(f"{time.time() - start_time} seconds")
