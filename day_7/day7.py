@@ -1,3 +1,5 @@
+import time
+start_time = time.time()
 bags = {}
 
 with open('./day_7/source.txt', 'r') as source:
@@ -33,3 +35,4 @@ for item in bags.keys():
     containcount += contain(item)
 
 print(containcount)
+print(f"{time.time()-start_time} seconds")
