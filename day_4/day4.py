@@ -57,7 +57,7 @@ def program(passports):
             valid_passports += 1
         if tempsecure == 7:
             valid_secure += 1
-    return f"valid passports: {valid_passports}, valid passports with valid values: {valid_secure}"
+    return f"Part1: {valid_passports}\nPart2: {valid_secure}"
 
 
 print(program(passports))
