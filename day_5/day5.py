@@ -2,7 +2,7 @@ passes = []
 rows = []
 cols = []
 ids = []
-with open('source.txt', 'r') as source:
+with open('./day_5/source.txt', 'r') as source:
     for item in source:
         passes.append(item)
 for item in passes:
@@ -33,12 +33,9 @@ for item in passes:
                 cols.append(coltop)
 for i, item in enumerate(rows):
     ids.append(item * 8 + cols[i])
-# first part
-print(max(ids))
-# second part
-print(sorted(ids))
+print(f"Part1: {max(ids)}")
 yourseat = 0
 for i in range(0, len(ids)):
     if min(ids) < i < max(ids) and i not in ids:
         yourseat = i
-print(yourseat)
+print(f"Part2: {yourseat}")
